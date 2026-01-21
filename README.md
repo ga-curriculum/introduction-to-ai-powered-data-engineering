@@ -5,9 +5,8 @@
 ---
 
 ## Prerequisites
-* Pre-req here
-* Pre-req here
-* Please put n/a if none are needed
+* Basic familiarity with data concepts (e.g., datasets, tables, files).
+* General awareness of how machine learning or AI systems are used in practice.
 
 ---
 
@@ -119,7 +118,6 @@ The instructor will guide learners through a hands-on activity that reinforces t
 ## Resources 
 
 - Include links to important resources the learners can reference
-- Link
-- Link
-- Link
-- etc. 
+- [Google – *Rules of Machine Learning*](https://developers.google.com/machine-learning/guides/rules-of-ml) 
+- [Martin Kleppmann – *Designing Data-Intensive Applications*](https://dataintensive.net/)
+- [Sculley et al. – *Hidden Technical Debt in Machine Learning Systems*](https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf)
