@@ -31,7 +31,14 @@ By the end of this module, you'll be able to:
 
 ## What You Will Learn 
 
-Content goes here // continue until you reach the end. Include examples, tables, images (when needed), and code practice / follow alongs.
+ Segment | Topic | Duration (minutes) |
+|------:|-------|--------------------:|
+| 1 | The Role of Data Engineering in AI Systems | 15 |
+| 2 | The AI Data Lifecycle: End-to-End View | 15 |
+| 3 | Automation and Data Flow Patterns | 10 |
+| 4 | Lab: Mapping the AI Data Lifecycle (Instructor-Led) | 50 |
+| 5 | Wrap-Up and Course Connection | 10 |
+|   | **Total** | **120** |
 
 ---
 
