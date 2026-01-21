@@ -5,7 +5,7 @@
 ---
 
 **What This Module is About:**  
-One to two sentences explaining what this module is about. 
+This module introduces the role of data engineering in AI systems by establishing a shared mental model of the AI data lifecycle, from ingestion to monitoring. It sets the conceptual foundation for the course by reframing AI as a data systems problem rather than a purely modeling problem. 
 
 **Core Objectives:**  
 - Establish a shared understanding of the role of data engineering in AI systems  
