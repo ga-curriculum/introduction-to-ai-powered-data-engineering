@@ -42,7 +42,7 @@ By the end of this module, you'll be able to:
 
 ---
 
-## The Role of Data Engineering in AI Systems (10 min)
+## The Role of Data Engineering in AI Systems (15 min)
 
 While AI systems are often associated with models and algorithms, most real-world AI challenges occur **outside** the modeling phase. Data must be collected, prepared, delivered, and monitored continuously for models to function reliably in production.
 
