@@ -1,4 +1,4 @@
-# Module Name
+# Introduction to AI-Powered Data Engineering
 
 **Session Time:** # minutes
 
