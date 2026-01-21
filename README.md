@@ -1,6 +1,6 @@
 # Introduction to AI-Powered Data Engineering
 
-**Session Time:** # minutes
+**Session Time:** 120 minutes
 
 ---
 
@@ -13,19 +13,19 @@
 
 ## Table of Contents 
 
-1. Title of Section - link directly
-2. Title of Section - link directly
-3. Title of Section - link directly
-4. etc.
+1. The Role of Data Engineering in AI Systems
+2. The AI Data Lifecycle: An End-to-End View
+3. Automation and Data Flow Patterns
+4. Lab: Mapping the AI Data Lifecycle
+5. Wrap-Up and Course Connection
+6. ResourcesTitle of Section
 
 ---
 
 ## Learning Objectives
 
 By the end of this module, you'll be able to:
-- Learning objectives #1
-- Learning objective #2
-- etc.
+- Explain how data engineering supports the AI lifecycle and enables automation in modern ML systems.
 
 ---
 
@@ -35,28 +35,77 @@ Content goes here // continue until you reach the end. Include examples, tables,
 
 ---
 
-## Theory Section Title
+## The Role of Data Engineering in AI Systems (10 min)
 
-Content goes here // continue until you reach the end. Include examples, tables, images (when needed), and code practice / follow alongs. 
+While AI systems are often associated with models and algorithms, most real-world AI challenges occur **outside** the modeling phase. Data must be collected, prepared, delivered, and monitored continuously for models to function reliably in production.
+
+**Data Engineering** provides the foundation that enables AI systems to operate at scale. It ensures that data is:
+
+- Available when needed  
+- Reliable and reproducible  
+- Structured for analytics and machine learning  
+- Delivered consistently to downstream systems  
+
+In practice, AI models are **consumers of data pipelines**. When data pipelines fail, models fail—regardless of how well they were trained. This course begins by reframing AI as a **data systems problem** before it is a modeling problem.
 
 ---
 
-## Theory Section Title
+## The AI Data Lifecycle: An End-to-End View (15 min)
 
-Content goes here // continue until you reach the end. Include examples, tables, images (when needed), and code practice / follow alongs. 
+AI systems operate within a continuous lifecycle rather than a one-time workflow. This lifecycle provides a shared mental model that will be reused throughout the course.
+
+### Core stages of the AI data lifecycle:
+
+1. **Data Ingestion**  
+   Collecting data from sources such as applications, APIs, databases, files, or event streams.
+
+2. **Data Storage**  
+   Persisting raw and processed data in scalable systems that balance cost, performance, and accessibility.
+
+3. **Data Transformation**  
+   Cleaning, validating, enriching, and restructuring data into formats suitable for analytics and machine learning.
+
+4. **Data Serving & Consumption**  
+   Delivering curated data to downstream consumers, including ML models, dashboards, and applications.
+
+5. **Monitoring & Feedback**  
+   Observing data quality, pipeline health, and downstream impact to detect issues such as failures or data drift.
+
+This lifecycle is **iterative**. Monitoring insights continuously feed back into earlier stages, enabling systems to adapt over time.
 
 ---
 
-## Theory Section Title
+## Automation and Data Flow Patterns (10 min)
 
-Content goes here // continue until you reach the end. Include examples, tables, images (when needed), and code practice / follow alongs. 
+Manual data workflows do not scale in AI systems. As data volume, velocity, and usage grow, **automation becomes a requirement—not an optimization**.
+
+Automation enables:
+- Repeatable and scheduled data processing  
+- Reliable recovery from failures  
+- Consistent data quality  
+- Faster iteration and deployment cycles  
+
+At a high level, AI systems handle data using different **flow patterns**:
+- **Batch processing** for periodic, high-volume workloads  
+- **Real-time or streaming processing** for low-latency, continuous data  
+
+Most production systems combine both patterns. Data engineering is responsible for designing pipelines that support these flows while remaining observable and reliable.
+
+---
+
+## 4. Lab: Mapping the AI Data Lifecycle (Instructor-Led) (50 min)
+
+**Objective:**  
+Apply the concepts from this session to map an end-to-end AI data lifecycle, identifying each stage and how data flows between them.
+
+The instructor will guide learners through a hands-on activity that reinforces the lifecycle model and prepares them for deeper technical implementation in later modules.
 
 ---
 
 ## Wrap-Up Reflection 
-- Reflection question #1
-- Reflection question #2
-- Reflection question #3
+- AI systems are data systems first
+- Models depend on reliable, automated pipelines
+- The AI data lifecycle provides a reusable framework across tools and domains
 
 ---
 
