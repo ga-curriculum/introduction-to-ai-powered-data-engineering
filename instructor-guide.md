@@ -113,6 +113,11 @@ Bridge theory to practice without explaining the lab implementation.
 
 ### Next Steps
 - The next module will focus on **Data Storage and Architecture**  
-- Learners will dive deeper into how data is persisted and organized to support AI workloads  
+- Learners will dive deeper into how data is persisted and organized to support AI workloads
+
+## Resources 
+- [Google – *Rules of Machine Learning*](https://developers.google.com/machine-learning/guides/rules-of-ml) 
+- [Martin Kleppmann – *Designing Data-Intensive Applications*](https://dataintensive.net/)
+- [Sculley et al. – *Hidden Technical Debt in Machine Learning Systems*](https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf)
 
 ---
