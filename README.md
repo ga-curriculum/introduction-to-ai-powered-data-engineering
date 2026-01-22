@@ -60,6 +60,10 @@ In practice, AI models are **consumers of data pipelines**. When data pipelines 
 
 AI systems operate within a continuous lifecycle rather than a one-time workflow. This lifecycle provides a shared mental model that will be reused throughout the course.
 
+<img width="409" height="317" alt="image" src="https://git.generalassemb.ly/user-attachments/assets/76ef01c6-af15-49b0-b7e0-66a09768c109" />
+
+This lifecycle illustrates how raw signals from the real world are transformed into insights that humans and systems can act upon. The lifecycle is continuous: insights generated at the end of the process inform future data generation, collection, and system improvements.
+
 ### Core stages of the AI data lifecycle:
 
 1. **Data Ingestion**  
@@ -85,11 +89,21 @@ This lifecycle is **iterative**. Monitoring insights continuously feed back into
 
 Manual data workflows do not scale in AI systems. As data volume, velocity, and usage grow, **automation becomes a requirement—not an optimization**.
 
+### Batch
+<img width="553" height="44" alt="image" src="https://git.generalassemb.ly/user-attachments/assets/ac709e70-b70b-492e-8949-43f9c499e208" />
+
+Batch data flows collect data over time and process it at scheduled intervals. This pattern prioritizes efficiency and scalability, making it suitable for historical analysis, reporting, and periodic model training.
+
+### Streaming
+<img width="554" height="43" alt="image" src="https://git.generalassemb.ly/user-attachments/assets/2fb0d8f9-81b8-41ef-afd0-441008462503" />
+
+Streaming data flows process events continuously as they occur. This pattern prioritizes low latency and real-time responsiveness, enabling use cases such as personalization, fraud detection, and live system monitoring.
+
 Automation enables:
 - Repeatable and scheduled data processing  
 - Reliable recovery from failures  
 - Consistent data quality  
-- Faster iteration and deployment cycles  
+- Faster iteration and deployment cycles
 
 At a high level, AI systems handle data using different **flow patterns**:
 - **Batch processing** for periodic, high-volume workloads  
