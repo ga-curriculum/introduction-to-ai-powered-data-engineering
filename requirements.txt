@@ -1,0 +1,6 @@
+# Requirements for Lesson 01: Introduction to AI-Powered Data Engineering
+# Practice Problems
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+pandas>=2.0.0
