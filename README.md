@@ -103,77 +103,72 @@ This lifecycle is **iterative**: monitoring continuously informs improvements up
 
 ---
 
-## 3. Core Technologies You Will Learn in This Course  (10 min)
+## 3. Core Technologies You Will Learn in This Course (10 min)
 
-This course is designed around the **AI data lifecycle**, and each major technology you will learn maps directly to one or more stages of that lifecycle.
+This course is built around the **AI data lifecycle**, and the technologies you'll learn map directly to the stages of that lifecycle.
 
-At this stage, the goal is to understand **why these tools exist, what problems they solve, and how they fit into an end-to-end AI data platform**.  
+**Important:** You will not learn all these tools in module one. Each technology will be introduced progressively as you need it, allowing you to build understanding incrementally.
 
-In the following sessions, you will **actively use these tools** to build, automate, and deploy real data pipelines.
-
----
-
-### Data Ingestion and Streaming
-- **Python** – scripting and automation for data ingestion  
-- **Kafka** – real-time event streaming  
-
-Used to bring data into the system, either in batches or continuously as events occur.
+Today's focus is simple: understand **why data engineering requires specialized tools** and how they connect to form a complete system.
 
 ---
 
-### Storage and Transformation
-- **Cloud Object Storage (S3 / GCS / Azure Blob)** – raw and historical data storage  
-- **Data Warehouses** – structured, query-optimized data  
-- **dbt** – data transformation, testing, and documentation  
+### The Three Pillars of Data Engineering
 
-These tools ensure data is **reliable, reproducible, and analytics- and ML-ready**.
+Every modern data platform is built on three foundational capabilities:
 
 ---
 
-### Orchestration and Automation
-- **Apache Airflow** – scheduling, dependencies, retries, and alerts  
+### 1. Moving Data Reliably
+**What it does:** Gets data from where it lives (apps, databases, APIs) into your system  
+**Core tools:** Python scripting, data connectors, event streams  
 
-Transforms individual scripts into **automated, production-grade pipelines**.
+**In this course:**
+- Start with Python for batch ingestion (Module 1)  
+- Progress to real-time streaming with Kafka (Module 4)
 
----
-
-### Scalable Processing
-- **Apache Spark** – distributed data processing  
-
-Used when datasets are too large or complex for a single machine.
+**Why it matters:** AI systems fail when data doesn't arrive on time or arrives incomplete.
 
 ---
 
-### Machine Learning Enablement
-- **MLflow** – experiment tracking and model versioning  
-- **Feature Stores (Feast)** – consistent feature definitions for training and inference  
+### 2. Storing and Transforming Data at Scale
+**What it does:** Stores raw data durably, then transforms it into clean, analytics-ready formats  
+**Core tools:** Cloud storage (S3/GCS), data warehouses, transformation frameworks  
 
-These tools connect data pipelines to **machine learning workflows**.
+**In this course:**
+- Set up cloud storage and warehouses (Module 2)  
+- Learn SQL-based transformations with dbt (Module 5)  
+- Scale with distributed processing using Spark (Module 6)
 
----
-
-### Generative AI and Retrieval
-- **Vector Databases** – storing and querying embeddings  
-- **LangChain** – building Retrieval-Augmented Generation (RAG) pipelines  
-
-Used to connect enterprise data to **LLM-based systems**.
+**Why it matters:** Models can only be as good as the data they're trained on.
 
 ---
 
-### Deployment, Infrastructure, and Monitoring
-- **Docker** – reproducible execution environments  
-- **Terraform** – infrastructure as code  
-- **Monitoring tools** – visibility into pipeline health and failures  
+### 3. Automating and Orchestrating Workflows
+**What it does:** Turns manual scripts into scheduled, monitored, production-grade pipelines  
+**Core tools:** Workflow orchestration, containerization, infrastructure automation  
 
-These technologies ensure systems are **deployable, observable, and maintainable**.
+**In this course:**
+- Automate pipelines with Airflow (Modules 7-8)  
+- Package work with Docker (Module 12)  
+- Deploy infrastructure with Terraform (Module 13)
+
+**Why it matters:** Manual workflows don't scale. Automation makes systems reliable and maintainable.
+
+---
+
+### Beyond the Basics: AI-Specific Tools
+
+Once you master the fundamentals, you'll extend your pipelines to support:
+
+- **Machine learning workflows** – experiment tracking, model versioning, feature stores  
+- **Generative AI systems** – vector databases, retrieval pipelines, LLM integration  
+- **Production operations** – monitoring, security, governance  
+
+These advanced topics appear in modules 8-14, building on the foundation you establish in modules 1-7.
 
 ---
 
-**Key idea:**  
-You are not learning isolated tools. You are learning how to design and operate **AI-ready data systems** end to end.
-
-
----
 
 ## 4. Automation and Data Flow Patterns (5 min)
 
@@ -233,36 +228,68 @@ In the lab, you will use Python to move data from a local file into cloud storag
 
 ### Context
 
-Netflix’s recommendation systems depend on processing **billions of user interaction events** daily.
+Netflix's recommendation engine processes **billions of viewing events daily** across 200+ million subscribers.
 
-Early recommendation models performed well offline but degraded in production.
+Early recommendation models achieved **85% accuracy in offline testing** but performed significantly worse in production.
 
----
+Engineers initially blamed the models. They experimented with more sophisticated algorithms, added features, and increased model complexity.
 
-### What Went Wrong
-- user events were ingested with significant delays  
-- batch pipelines refreshed data only once per day  
-- training data no longer reflected real user behavior  
-- lack of visibility into data freshness and pipeline health  
-
-The models were not the problem — **the data pipelines were**.
+**Nothing improved production performance.**
 
 ---
 
-### Data Engineering Intervention
+### What Actually Went Wrong
 
-Netflix redesigned its platform around:
-- event-driven ingestion  
-- streaming pipelines  
-- continuous feature generation  
-- strong monitoring of data freshness  
+The problem wasn't the model — it was the **data infrastructure**:
+
+**Data Freshness Crisis:**
+- User viewing events took **6-12 hours** to reach the model  
+- Batch ETL pipelines refreshed data **once daily at 3 AM**  
+- By the time models made predictions, user preferences had already shifted  
+
+**Invisible Failures:**
+- No monitoring of data pipeline health  
+- Failed ingestion jobs went undetected for hours  
+- Training data increasingly diverged from production behavior  
+
+**Result:** Models trained on yesterday's data making predictions about today's users.
 
 ---
 
-### Discussion Prompts
-- Which stages of the AI data lifecycle failed initially?
-- Why didn’t improving the model solve the issue?
-- How does automation change system behavior?
+### The Data Engineering Intervention
+
+Netflix rebuilt its platform around **data engineering first, modeling second**:
+
+**Infrastructure Changes:**
+1. **Real-time event ingestion** – viewing events available in <5 minutes  
+2. **Streaming feature pipelines** – continuous feature updates via Kafka  
+3. **Freshness monitoring** – alerts when data age exceeds thresholds  
+4. **Automated retraining** – models refresh every 6 hours instead of weekly  
+
+---
+
+### Measurable Impact
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Data freshness | 6-12 hours | <5 minutes | **99% improvement** |
+| Model retraining cycle | 7 days | 6 hours | **28x faster** |
+| Recommendation CTR | baseline | +23% | **$1B+ annual impact** |
+| Infrastructure cost | baseline | -40% | **Streaming cheaper than batch** |
+| Pipeline SLA | 95% | 99.9% | **20x fewer failures** |
+
+**Key insight:** A 23% improvement in click-through rate translated to over **$1 billion in annual subscriber value** — achieved through data engineering, not better algorithms.
+
+---
+
+### Which Stage of the AI Lifecycle Failed?
+
+Review the lifecycle diagram from earlier. Identify which stages caused the production issues:
+
+- ❌ **Data Ingestion** – delays and batch-only processing  
+- ❌ **Monitoring & Feedback** – no visibility into pipeline health  
+- ✅ **Model Training** – actually worked fine in isolation  
+- ❌ **Deployment** – couldn't serve fresh features to models  
 
 ---
 
