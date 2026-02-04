@@ -1,119 +1,276 @@
 # Introduction to AI-Powered Data Engineering
-
-**Session Time:** 120 minutes
+**Session Time:** 120 minutes  
+**Format:** Instructor-Led  
 
 ---
 
 ## Prerequisites
-* Basic familiarity with data concepts (e.g., datasets, tables, files).
-* General awareness of how machine learning or AI systems are used in practice.
+
+- Basic familiarity with data concepts (datasets, tables, files)
+- General awareness of how AI or ML systems are used in practice
+
+No prior experience with cloud platforms or ML tools is required.
 
 ---
 
-## Table of Contents 
+## Learning Objective
 
-1. The Role of Data Engineering in AI Systems
-2. The AI Data Lifecycle: An End-to-End View
-3. Automation and Data Flow Patterns
-4. Lab: Mapping the AI Data Lifecycle
-5. Wrap-Up and Course Connection
-6. ResourcesTitle of Section
+Explain how data engineering supports the AI lifecycle and enables automation in modern machine learning systems.
 
 ---
 
-## Learning Objectives
+## Session Breakdown
 
-By the end of this module, you'll be able to:
-- Explain how data engineering supports the AI lifecycle and enables automation in modern ML systems.
-
----
-
-## What You Will Learn 
-
- Segment | Topic | Duration (minutes) |
-|------:|-------|--------------------:|
-| 1 | The Role of Data Engineering in AI Systems | 15 |
-| 2 | The AI Data Lifecycle: End-to-End View | 15 |
-| 3 | Automation and Data Flow Patterns | 10 |
-| 4 | Lab: Mapping the AI Data Lifecycle (Instructor-Led) | 50 |
-| 5 | Wrap-Up and Course Connection | 10 |
-|   | **Total** | **120** |
+| Segment | Topic | Duration |
+|------:|------|---------:|
+| 1 | The Role of Data Engineering in AI Systems | 10 min |
+| 2 | The AI Data Lifecycle: An End-to-End View | 10 min |
+| 3 | Core Technologies You Will Learn in This Course | 10 min |
+| 4 | Automation and Data Flow Patterns | 5 min |
+| 5 | Python and Cloud Storage in Data Engineering | 5 min |
+| 6 | Case Study: Netflix and Data Pipeline Failures | 5 min |
+| 7 | Break | 10 min |
+| 8 | Lab | 60 min |
+| 9 | Wrap-Up and Course Connection | 5 min |
+|   | **Total** | **120 min** |
 
 ---
 
-## The Role of Data Engineering in AI Systems (15 min)
+## 1. The Role of Data Engineering in AI Systems (10 min)
 
-While AI systems are often associated with models and algorithms, most real-world AI challenges occur **outside** the modeling phase. Data must be collected, prepared, delivered, and monitored continuously for models to function reliably in production.
+AI systems are often associated with models and algorithms, but most real-world AI failures happen **outside the modeling phase**.
 
-**Data Engineering** provides the foundation that enables AI systems to operate at scale. It ensures that data is:
+Before a model can generate value, data must be:
+- collected continuously
+- validated and transformed
+- delivered reliably to downstream systems
+- monitored over time
 
-- Available when needed  
-- Reliable and reproducible  
-- Structured for analytics and machine learning  
-- Delivered consistently to downstream systems  
+**Data engineering** provides the foundation that enables AI systems to operate in production.
 
-In practice, AI models are **consumers of data pipelines**. When data pipelines fail, models fail—regardless of how well they were trained. This course begins by reframing AI as a **data systems problem** before it is a modeling problem.
+In practice:
+- ML models are **consumers of data pipelines**
+- when pipelines fail, models fail
+- model performance cannot exceed data quality
 
----
-
-## The AI Data Lifecycle: An End-to-End View (15 min)
-
-AI systems operate within a continuous lifecycle rather than a one-time workflow. This lifecycle provides a shared mental model that will be reused throughout the course.
-
-<img width="409" height="317" alt="image" src="https://git.generalassemb.ly/user-attachments/assets/76ef01c6-af15-49b0-b7e0-66a09768c109" />
-
-This lifecycle illustrates how raw signals from the real world are transformed into insights that humans and systems can act upon. The lifecycle is continuous: insights generated at the end of the process inform future data generation, collection, and system improvements.
-
-### Core stages of the AI data lifecycle:
-
-1. **Data Ingestion**  
-   Collecting data from sources such as applications, APIs, databases, files, or event streams.
-
-2. **Data Storage**  
-   Persisting raw and processed data in scalable systems that balance cost, performance, and accessibility.
-
-3. **Data Transformation**  
-   Cleaning, validating, enriching, and restructuring data into formats suitable for analytics and machine learning.
-
-4. **Data Serving & Consumption**  
-   Delivering curated data to downstream consumers, including ML models, dashboards, and applications.
-
-5. **Monitoring & Feedback**  
-   Observing data quality, pipeline health, and downstream impact to detect issues such as failures or data drift.
-
-This lifecycle is **iterative**. Monitoring insights continuously feed back into earlier stages, enabling systems to adapt over time.
+This course starts by reframing AI as a **data systems problem** before it is a modeling problem.
 
 ---
 
-## Automation and Data Flow Patterns (10 min)
+### Traditional Analytics vs AI Systems
 
-Manual data workflows do not scale in AI systems. As data volume, velocity, and usage grow, **automation becomes a requirement—not an optimization**.
+<img width="757" height="230" alt="image" src="https://git.generalassemb.ly/user-attachments/assets/517b9cf3-7457-4321-bcef-d580c956a6ce" />
 
-### Batch
+**Key idea:**  
+In AI systems, data pipelines are **part of the product itself**, not just backend infrastructure.
+
+---
+
+## 2. The AI Data Lifecycle: An End-to-End View (10 min)
+
+AI systems operate within a **continuous lifecycle**, not a one-time workflow.
+
+This lifecycle provides a shared mental model that will be reused throughout the course.
+
+### High-Level AI Data Lifecycle
+
+<img width="503" height="345" alt="image" src="https://git.generalassemb.ly/user-attachments/assets/5f1fc432-60e1-490d-82a5-18fea513a1ca" />
+
+## Core Stages 
+
+### Data Ingestion
+Collecting data from applications, APIs, databases, files, or event streams.
+
+### Data Storage
+Persisting raw and processed data in scalable systems that balance cost, performance, and accessibility.
+
+### Data Transformation
+Cleaning, validating, enriching, and reshaping data into analytics- and ML-ready formats.
+
+### Feature Management
+Defining reusable and consistent inputs shared across model training and inference.
+
+### Model Training & Tracking
+Training models while tracking experiments, parameters, metrics, and versions.
+
+### Deployment
+Making data pipelines and models executable in production environments.
+
+### Monitoring & Feedback
+Observing data quality, pipeline health, and model behavior, and feeding insights back into the system.
+
+This lifecycle is **iterative**: monitoring continuously informs improvements upstream.
+
+---
+
+## 3. Core Technologies You Will Learn in This Course  (10 min)
+
+This course is designed around the **AI data lifecycle**, and each major technology you will learn maps directly to one or more stages of that lifecycle.
+
+At this stage, the goal is to understand **why these tools exist, what problems they solve, and how they fit into an end-to-end AI data platform**.  
+
+In the following sessions, you will **actively use these tools** to build, automate, and deploy real data pipelines.
+
+---
+
+### Data Ingestion and Streaming
+- **Python** – scripting and automation for data ingestion  
+- **Kafka** – real-time event streaming  
+
+Used to bring data into the system, either in batches or continuously as events occur.
+
+---
+
+### Storage and Transformation
+- **Cloud Object Storage (S3 / GCS / Azure Blob)** – raw and historical data storage  
+- **Data Warehouses** – structured, query-optimized data  
+- **dbt** – data transformation, testing, and documentation  
+
+These tools ensure data is **reliable, reproducible, and analytics- and ML-ready**.
+
+---
+
+### Orchestration and Automation
+- **Apache Airflow** – scheduling, dependencies, retries, and alerts  
+
+Transforms individual scripts into **automated, production-grade pipelines**.
+
+---
+
+### Scalable Processing
+- **Apache Spark** – distributed data processing  
+
+Used when datasets are too large or complex for a single machine.
+
+---
+
+### Machine Learning Enablement
+- **MLflow** – experiment tracking and model versioning  
+- **Feature Stores (Feast)** – consistent feature definitions for training and inference  
+
+These tools connect data pipelines to **machine learning workflows**.
+
+---
+
+### Generative AI and Retrieval
+- **Vector Databases** – storing and querying embeddings  
+- **LangChain** – building Retrieval-Augmented Generation (RAG) pipelines  
+
+Used to connect enterprise data to **LLM-based systems**.
+
+---
+
+### Deployment, Infrastructure, and Monitoring
+- **Docker** – reproducible execution environments  
+- **Terraform** – infrastructure as code  
+- **Monitoring tools** – visibility into pipeline health and failures  
+
+These technologies ensure systems are **deployable, observable, and maintainable**.
+
+---
+
+**Key idea:**  
+You are not learning isolated tools. You are learning how to design and operate **AI-ready data systems** end to end.
+
+
+---
+
+## 4. Automation and Data Flow Patterns (5 min)
+
+Manual data workflows do not scale in AI systems.  
+As data volume, velocity, and usage grow, **automation becomes mandatory**.
+
+### Manual vs Automated Workflow 
+
+<img width="620" height="341" alt="image" src="https://git.generalassemb.ly/user-attachments/assets/d924476f-2321-44ed-9893-0024df5d3507" />
+
+
+---
+
+### Batch and Streaming Patterns
+
+**Batch processing:**
+
 <img width="553" height="44" alt="image" src="https://git.generalassemb.ly/user-attachments/assets/ac709e70-b70b-492e-8949-43f9c499e208" />
 
-Batch data flows collect data over time and process it at scheduled intervals. This pattern prioritizes efficiency and scalability, making it suitable for historical analysis, reporting, and periodic model training.
+- scheduled execution  
+- high throughput  
+- used for reporting and periodic model training  
 
-### Streaming
+**Streaming processing:**
+
 <img width="554" height="43" alt="image" src="https://git.generalassemb.ly/user-attachments/assets/2fb0d8f9-81b8-41ef-afd0-441008462503" />
 
-Streaming data flows process events continuously as they occur. This pattern prioritizes low latency and real-time responsiveness, enabling use cases such as personalization, fraud detection, and live system monitoring.
+- continuous execution  
+- low latency  
+- used for personalization, fraud detection, and monitoring  
 
-Automation enables:
-- Repeatable and scheduled data processing  
-- Reliable recovery from failures  
-- Consistent data quality  
-- Faster iteration and deployment cycles
-
-At a high level, AI systems handle data using different **flow patterns**:
-- **Batch processing** for periodic, high-volume workloads  
-- **Real-time or streaming processing** for low-latency, continuous data  
-
-Most production systems combine both patterns. Data engineering is responsible for designing pipelines that support these flows while remaining observable and reliable.
+Most production AI systems combine **both patterns**.
 
 ---
 
-## 4. Lab: Mapping the AI Data Lifecycle (Instructor-Led) (50 min)
+## 5. Python and Cloud Storage in Data Engineering (5 min)
+
+Modern data engineering relies on **simple building blocks** used consistently.
+
+### Python in Data Engineering
+- used for ingestion, transformation, and orchestration  
+- acts as the “glue” between systems  
+- scripts evolve into automated pipelines  
+
+### Cloud Object Storage
+- stores raw and processed data durably  
+- decouples storage from compute  
+- enables reprocessing, auditing, and scaling  
+
+Examples include Amazon S3, Google Cloud Storage, and Azure Blob Storage.
+
+In the lab, you will use Python to move data from a local file into cloud storage, applying these concepts in practice.
+
+---
+
+## 6. Case Study: Netflix and Data Pipeline Failures (5 min)
+
+### Context
+
+Netflix’s recommendation systems depend on processing **billions of user interaction events** daily.
+
+Early recommendation models performed well offline but degraded in production.
+
+---
+
+### What Went Wrong
+- user events were ingested with significant delays  
+- batch pipelines refreshed data only once per day  
+- training data no longer reflected real user behavior  
+- lack of visibility into data freshness and pipeline health  
+
+The models were not the problem — **the data pipelines were**.
+
+---
+
+### Data Engineering Intervention
+
+Netflix redesigned its platform around:
+- event-driven ingestion  
+- streaming pipelines  
+- continuous feature generation  
+- strong monitoring of data freshness  
+
+---
+
+### Discussion Prompts
+- Which stages of the AI data lifecycle failed initially?
+- Why didn’t improving the model solve the issue?
+- How does automation change system behavior?
+
+---
+
+## 7. Break (10 min)
+
+---
+
+## 8. Lab (60 min)
 
 **Objective:**  
 Apply the concepts from this session to map an end-to-end AI data lifecycle, identifying each stage and how data flows between them.
@@ -122,10 +279,21 @@ The instructor will guide learners through a hands-on activity that reinforces t
 
 ---
 
-## Wrap-Up Reflection 
-- AI systems are data systems first
-- Models depend on reliable, automated pipelines
-- The AI data lifecycle provides a reusable framework across tools and domains
+## 9. Wrap-Up and Course Connection (5 min)
+
+### Key Takeaways
+- AI systems are **data systems first**
+- Models consume automated data pipelines
+- The AI data lifecycle provides a reusable mental framework
+- Automation is essential for reliable AI systems
+
+---
+
+### Looking Ahead
+
+Next session: **Cloud Data Storage and Architecture Design**
+
+You will explore how storage decisions impact scalability, cost, and downstream AI workloads.
 
 ---
 
@@ -133,3 +301,4 @@ The instructor will guide learners through a hands-on activity that reinforces t
 - [Google – *Rules of Machine Learning*](https://developers.google.com/machine-learning/guides/rules-of-ml) 
 - [Martin Kleppmann – *Designing Data-Intensive Applications*](https://dataintensive.net/)
 - [Sculley et al. – *Hidden Technical Debt in Machine Learning Systems*](https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf)
+
