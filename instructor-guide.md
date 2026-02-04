@@ -145,9 +145,20 @@ Ground abstract concepts in a **real production failure scenario**.
 - Data engineering changes — not model changes — fixed the problem  
 
 ### Teaching Tips
+
 - Ask learners to map failures back to lifecycle stages  
 - Reinforce that model improvements alone were insufficient  
 - Keep discussion high-level and focused  
+
+### Discussion Prompts
+1. Why didn't improving the model solve the problem?  
+   *Expected answer: Models were already good; they just had stale data*
+
+2. How does this connect to "AI systems are data systems first"?  
+   *Expected answer: The pipeline architecture determined model effectiveness*
+
+3. Which would you prioritize: 90% accurate model with fresh data, or 95% accurate model with day-old data?  
+   *Expected answer: Fresh data usually matters more than marginal accuracy gains*
 
 ---
 
