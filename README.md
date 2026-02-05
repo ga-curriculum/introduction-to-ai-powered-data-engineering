@@ -17,6 +17,8 @@ No prior experience with cloud platforms or ML tools is required.
 
 Explain how data engineering supports the AI lifecycle and enables automation in modern machine learning systems.
 
+In this course, AI is treated as a **capability that augments data engineering work** — accelerating development, improving reliability, and enabling smarter automation — rather than as an end product or modeling focus.
+
 ---
 
 ## Session Breakdown
@@ -63,6 +65,9 @@ This course starts by reframing AI as a **data systems problem** before it is a 
 
 **Key idea:**  
 In AI systems, data pipelines are **part of the product itself**, not just backend infrastructure.
+
+Throughout this course, we will focus on how **AI techniques and tools can be applied to data engineering workflows** — such as pipeline design, data quality checks, and operational decision-making — to help engineers build better systems faster.
+
 
 ---
 
@@ -309,7 +314,7 @@ The instructor will guide learners through a hands-on activity that reinforces t
 ## 9. Wrap-Up and Course Connection (5 min)
 
 ### Key Takeaways
-- AI systems are **data systems first**
+- Modern data platforms are **data systems enhanced by AI**, where intelligence is used to improve automation, reliability, and developer productivity.
 - Models consume automated data pipelines
 - The AI data lifecycle provides a reusable mental framework
 - Automation is essential for reliable AI systems
