@@ -6,6 +6,8 @@
 
 ## What This Module Is About
 
+In this course, AI is positioned as a **capability that augments data engineering work** — supporting automation, decision-making, and reliability — rather than as a separate modeling discipline.
+
 This module introduces learners to **data engineering as the foundation of AI systems**, establishing a shared mental model of how data flows through an AI-ready platform — from ingestion to monitoring.
 
 Rather than focusing on tools or models, the session reframes AI as a **data systems and automation problem**, preparing learners to understand why production AI systems fail and how data engineering enables scalability, reliability, and iteration.
@@ -54,6 +56,7 @@ Reframe AI from a modeling problem to a **data systems problem**.
   *“Where do you think most AI systems break in production — models or data?”*  
 - Reinforce that starting with data (not models) is intentional  
 - Avoid introducing specific tools at this stage  
+- Reinforce that AI is used to **support data engineering workflows**, not to replace core engineering responsibilities.
 
 ---
 
