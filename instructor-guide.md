@@ -168,19 +168,6 @@ Ground abstract concepts in a **real production failure scenario**.
 ## 7. Lab Transition  
 **Time:** ~60 minutes
 
-### Purpose
-Move learners from conceptual understanding to applied thinking.
-
-### Key Talking Points
-- The lab reinforces the lifecycle model  
-- Focus is on structure and flow, not tools or correctness  
-- Learners should reason about data movement and stages  
-
-### Teaching Tips
-- Remind learners to reference the lifecycle diagram  
-- Encourage discussion rather than speed  
-- Avoid explaining implementation steps  
-
 ---
 
 ## Wrap-Up and Course Connection  
