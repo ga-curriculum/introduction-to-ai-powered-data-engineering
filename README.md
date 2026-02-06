@@ -304,11 +304,6 @@ Review the lifecycle diagram from earlier. Identify which stages caused the prod
 
 ## 8. Lab (60 min)
 
-**Objective:**  
-Apply the concepts from this session to map an end-to-end AI data lifecycle, identifying each stage and how data flows between them.
-
-The instructor will guide learners through a hands-on activity that reinforces the lifecycle model and prepares them for deeper technical implementation in later modules.
-
 ---
 
 ## 9. Wrap-Up and Course Connection (5 min)
