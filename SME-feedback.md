@@ -1,7 +1,7 @@
 # SME Feedback: Introduction to AI-Powered Data Engineering
 
 **Reviewer:** SME  
-**Date:** 2025-01-29  
+**Date:** 2025-02-08  
 **Status:** Approved
 
 ---
